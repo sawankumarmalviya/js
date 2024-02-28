@@ -116,3 +116,29 @@ for( let i = 0; i<strnum.length; i++){
     strnumadd+=parseInt( strnum[i])
 }  
 console.log(strnumadd)
+
+//WAP to print reverse of given number (using loop).
+
+
+let givennumber = 16052
+let rev = 0;
+
+while(givennumber >0){
+  let lasstdig = givennumber%10 
+  rev= rev*10+lasstdig;
+  givennumber = (givennumber-lasstdig)/10
+  
+}
+console.log(rev)
+
+
+let onenum = 1250;
+let revrs = 0
+while(onenum >0){
+    let last = onenum%10 //0
+    revrs = (revrs*10)+last //0*10+0= 0
+    onenum = Math.floor(onenum / 10);//(1250-0)/10=125
+}
+console.log(revrs)
+
+
