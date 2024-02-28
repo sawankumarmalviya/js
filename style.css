@@ -1,0 +1,11 @@
+a{text-decoration: none;}
+.top_header{background-color: #313041;}
+.header-social-link{list-style: none;}
+.top_header a {
+    color: #fff;
+}
+.get-a-quote {
+    padding: 15px 20px;
+    background-color: indianred;
+    text-transform: uppercase;
+}
