@@ -139,6 +139,49 @@ while(onenum >0){
     revrs = (revrs*10)+last //0*10+0= 0
     onenum = Math.floor(onenum / 10);//(1250-0)/10=125
 }
-console.log(revrs)
+console.log(revrs);
 
 
+// WAP to check a number is palindrom or not.
+
+ let palindrom = 12521; // 161, 
+let revers = 0;
+let numcopy = palindrom;
+while(palindrom!=0){
+    let xdig = palindrom%10
+    revers = revers*10+xdig;
+    palindrom = (palindrom-xdig)/10
+}
+
+if(revers==numcopy){
+    console.log('this number is palnidrom')
+}else{
+    console.log('this number is not a palindrom number')
+}
+
+//WAP to check a number is armstrong or not. (armstrong number is some of its digits each reside to a power) 
+
+let arm = 1664; //
+let digicount = 0;
+let copyarm =arm;
+let sums = 0
+while(arm!=0){
+    rem = arm%10
+    sums= sums+(rem*rem*rem)//27=0+27 , 35=27+8 , 36=35+1
+    arm = (arm-rem)/10
+}
+if(sums==copyarm){
+    console.log(`${copyarm} is armstrong num`)
+}else{
+    console.log(`${copyarm} is not armstrong num`)   
+}
+
+//WAP to check a number is perfect number or not. 
+
+let perfectNum = 25;
+let perfectSum = 0
+for(let i = 0; i<perfectNum/2 ;i++){
+    if(perfectNum%i==0){
+        perfectSum+=i 
+    }
+}
