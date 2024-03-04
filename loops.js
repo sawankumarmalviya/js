@@ -131,7 +131,6 @@ while(givennumber >0){
 }
 console.log(rev)
 
-
 let onenum = 1250;
 let revrs = 0
 while(onenum >0){
@@ -161,27 +160,41 @@ if(revers==numcopy){
 
 //WAP to check a number is armstrong or not. (armstrong number is some of its digits each reside to a power) 
 
-let arm = 1664; //
-let digicount = 0;
+let arm = 153; //
 let copyarm =arm;
-let sums = 0
+let pwos = arm.toString().length;
+let intpow= 0
 while(arm!=0){
     rem = arm%10
-    sums= sums+(rem*rem*rem)//27=0+27 , 35=27+8 , 36=35+1
+    intpow += Math.pow(rem,pwos)
     arm = (arm-rem)/10
 }
-if(sums==copyarm){
-    console.log(`${copyarm} is armstrong num`)
+console.log(intpow)
+if(intpow==copyarm){
+    console.log(`${intpow} is armstrong num`)
 }else{
-    console.log(`${copyarm} is not armstrong num`)   
+    console.log(`${intpow} is not armstrong num`)   
 }
 
 //WAP to check a number is perfect number or not. 
 
-let perfectNum = 25;
-let perfectSum = 0
-for(let i = 0; i<perfectNum/2 ;i++){
-    if(perfectNum%i==0){
-        perfectSum+=i 
+let perfectNUm = 12;
+
+let sumperfectNUm = 0;
+
+for(let i = 0; i<=perfectNUm/2; i++){
+    if(perfectNUm%i==0){
+        sumperfectNUm= sumperfectNUm+i 
     }
+}
+if(perfectNUm== sumperfectNUm){
+    console.log(`${perfectNUm} is perfect number`)
+}else{
+    console.log(`${perfectNUm} is not perfect number`)  
+}
+
+//WAP to check a number is prime or not.
+let primeNUmber = 5;
+for(let i =2; i<=primeNUmber; i++){
+
 }
