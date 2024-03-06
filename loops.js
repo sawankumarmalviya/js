@@ -198,3 +198,13 @@ let primeNUmber = 5;
 for(let i =2; i<=primeNUmber; i++){
 
 }
+
+// nested loop 
+
+for(let i = 1; i<=10; i++){// 1,2,3,4,5,6,7,8,9,10
+    let ba= ""
+    for(let k = 1; k<=10 ; k++){// 1,2,3,4,5,6,7,8,9,10
+     ba = ba +   (i*k) +'\t'
+} 
+console.log(ba)
+} 
