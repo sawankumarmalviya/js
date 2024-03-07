@@ -208,3 +208,12 @@ for(let i = 1; i<=10; i++){// 1,2,3,4,5,6,7,8,9,10
 } 
 console.log(ba)
 } 
+// print  a tringle pattern
+
+for(let i = 1 ; i<10; i++){
+    let fa = ""
+    for(let j=1; j<i+1 ;j++){
+      fa = fa + i 
+    }
+    console.log(fa)
+}
