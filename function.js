@@ -122,38 +122,159 @@ function vovleOrConsonent(alphabet) {
         case "I":
         case "O":
         case "U": console.log(`${alphabet} is vovel`)
-        break
+            break
         default:
-            case "U": console.log(`${alphabet} is consonent`)
+        case "U": console.log(`${alphabet} is consonent`)
     }
 }
 vovleOrConsonent("d");
 
-function weekDay(num){
-  switch (num){
-    case 1: console.log(`${num} sunday`)
-    break;
-    case 2: console.log(`${num} monday`)
-    break;
-    case 3: console.log(`${num} tuesday`)
-    break;
-    case 4: console.log(`${num} wednesday`)
-    break;
-    case 5: console.log(`${num} thrusday`)
-    break;
-    case 6: console.log(`${num} friday`)
-    break;
-    case 7: console.log(`${num} saturday`)
-    break;
-  }  
+function weekDay(num) {
+    switch (num) {
+        case 1: console.log(`${num} sunday`)
+            break;
+        case 2: console.log(`${num} monday`)
+            break;
+        case 3: console.log(`${num} tuesday`)
+            break;
+        case 4: console.log(`${num} wednesday`)
+            break;
+        case 5: console.log(`${num} thrusday`)
+            break;
+        case 6: console.log(`${num} friday`)
+            break;
+        case 7: console.log(`${num} saturday`)
+            break;
+    }
 }
 weekDay(7)
 
 let d = new Date();
-console.log(d)
-let month= d.toLocaleString('default',{month:'short'})
-let year= d.toLocaleString('default',{year:'numeric'})
-console.log(year);
-let date = Date.getDate();
-console.log(date);
+let currentMonth = d.toLocaleString('default', { month: 'short' }) // get current month
+let currentYear = d.toLocaleString('default', { year: 'numeric' })//  get current year
+function daysInMonth(year, month) {  // get number of days in a given  month
+    return new Date(year, month, 0).getDate()
+}
+console.log(daysInMonth(2021, 4))
 
+//amount = 550/-
+function numberOfNotes(amount) {
+    let note500 = note200 = note100 = note50 = note20 = note10 = note5 = note2 = note1 = 0
+    if (amount >= 500) {
+        note500 = (amount - (amount % 500)) / 500
+        amount %= 500
+    }
+    if (amount >= 200) {
+        note200 = (amount - (amount % 200)) / 200
+        amount %= 200
+    }
+    if (amount >= 100) {
+        note100 = (amount - (amount % 100)) / 100
+        amount %= 100
+    }
+    if (amount >= 50) {
+        note50 = (amount - (amount % 50)) / 50
+        amount %= 50
+    }
+    if (amount >= 20) {
+        note20 = (amount - (amount % 20)) / 20
+        amount %= 20
+    }
+    if (amount >= 10) {
+        note10 = (amount - (amount % 10)) / 10
+        amount %= 10
+    }
+    if (amount >= 5) {
+        note5 = (amount - (amount % 5)) / 5
+        amount %= 5
+    }
+    if (amount >= 2) {
+        note2 = (amount - (amount % 2)) / 2
+        amount %= 2
+    }
+    if (amount >= 1) {
+        note1 = (amount - (amount % 1)) / 1
+        amount %= 1
+    }
+    return ` maximum notes of 
+notes500 = ${note500} 
+ notes200 = ${note200}
+ notes100 = ${note100} 
+ notes50 = ${note50} 
+ notes20 = ${note20} 
+ notes10 = ${note10} 
+ notes5 = ${note5}
+  notes2 = ${note2} 
+  notes1 = ${note1}`
+
+
+}
+let totalNotess = numberOfNotes(13685)
+console.log(totalNotess)
+
+function tringle(sum){
+    let angle1 = 100;
+    let angle2 = 60;
+    let angle3 = 20;
+     sum = angle1+angle2+angle3
+    if(sum==180){
+        return `this is tringle`
+    }else{
+        return `this is not a tringle`
+    }
+}
+
+console.log(tringle());
+
+function simpleIntrest(princple,rate,time){
+    return princple*rate*time/100
+}
+let intrest = simpleIntrest(16000,10,4);
+console.log(intrest)
+
+
+
+// Write a  program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and   Computer. Calculate percentage and grade according to following:
+// Percentage >= 90% : Grade A
+// Percentage >= 70% : Grade B
+// Percentage >= 50% : Grade c
+// Percentage >= 33% : Grade D
+
+const subjects=(Physics,Chemistry,Biology,Mathematics,Computer)=>{
+   Physics = 50;
+   Chemistry=60;
+   Biology=75;
+   Mathematics=80;
+   Computer=90;
+   let result = (Physics+Chemistry+Biology+Mathematics+Computer)*100/500
+   if(result>=90){
+    return 'Grade A ' + result + '%'
+   }else if(result>=70){
+    return 'Grade b' + result + '%'
+   }else if(result>=50){
+    return 'Grade c' + result + '%'
+   }else if(result>=33){
+    return 'grade d' + result + '%'
+   }else{
+    return 'Fail'
+   }
+   
+}
+console.log(subjects() ) 
+// loop in  within function 
+
+function namePrint(){
+   for(let i = 0; i<10;i++){
+    console.log(i+ "sawan")
+   } 
+}
+namePrint();
+
+
+function ntimes(n){
+for(let i = 0; i<n; i++){
+    let x = "sawan kumar"
+   console.log(x)
+}
+}
+ntimes(5)
