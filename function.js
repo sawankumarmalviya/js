@@ -278,3 +278,80 @@ for(let i = 0; i<n; i++){
 }
 }
 ntimes(5)
+
+
+function myFunction(theObj){
+    theObj.make = "toyota"
+}
+
+const mycar = {
+    make: "Honda",
+  model: "Accord",
+  year: 1998,
+}
+
+console.log(mycar.make)
+
+myFunction(mycar)
+console.log(mycar.year)
+
+
+function myCity(theObj){
+ theObj.make = "indore"
+}
+
+const city = {
+    make :"Bhopal",
+    make2:"khandwa",
+    make3:"ujjain",
+    make4:"maksi"
+}
+console.log(city.make4);
+console.log(city.make3)
+console.log(city.make2)
+console.log(city.make)
+
+myCity(city)
+console.log(city.make2)
+
+
+function Arrays(thearr){
+    thearr[0]=30
+}
+
+const arr = [45];
+console.log(arr[0])
+Arrays(arr)
+console.log(arr[0])
+
+const squar = function(number){
+    return number*number
+}
+let x = squar(4)
+console.log(x)
+
+const sequance = function(number){
+    return number + number
+}
+console.log(sequance(5))
+
+const fun = function(number ){
+return 500%number
+}
+console.log(fun(6))
+
+const factorial = function fun(n){
+return n<2 ? 1 : n* fun(n-1)
+}
+let resul = factorial(3)
+console.log(resul)
+
+const facts = function fu(num){
+   if(num<2){
+   return 1
+   }else{
+   return  num+ fu(num-1)
+   }
+}
+let ssss =facts(4) 
+console.log(ssss)
