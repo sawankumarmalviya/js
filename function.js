@@ -346,12 +346,30 @@ return n<2 ? 1 : n* fun(n-1)
 let resul = factorial(3)
 console.log(resul)
 
-const facts = function fu(num){
-   if(num<2){
+const facts = function FD(n){
+ if(n<2){
    return 1
-   }else{
-   return  num+ fu(num-1)
-   }
+}else{
+  return  n*FD(n-1)
 }
-let ssss =facts(4) 
-console.log(ssss)
+}
+let multi = facts(5)
+console.log(multi);
+
+const num1 = 5;
+const num2 = 6;
+const names = "malviya"
+function multiply(){
+    return num1*num2
+}
+console.log(multiply())
+
+function outsideFun(){
+    const num1 = 50;
+    const num2 = 60;
+    function add(){
+    return `${names} scord ${num1+num2}`
+    } 
+ return add()
+}
+console.log(outsideFun())
