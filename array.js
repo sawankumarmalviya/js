@@ -1,3 +1,4 @@
+
 let number  = [1,2,1,3,5,4,6,7]
 let number2 = [10,20,40,0,100,120,4,20]
 console.log(number[0])
@@ -24,15 +25,19 @@ console.log(fruitsArray.sort())
 for(let i = 0; i<city.length; i++){
    console.log(i , city[i]) ;
 }
-function moterbike(arr){
-    arr = ['honda','hero','royal Enfild','ktm','tvs','r15','yamaha']
+
+   let  arr = ['honda','hero','royal Enfild','ktm','tvs','r15','yamaha']
     for(let i = 0; i<arr.length; i++){
-        return arr[i]
+        console.log(arr[i])
     }
-    return 1
-}
-let moterbikeArray = moterbike();
-console.log(moterbikeArray);
 
 
+   
+
+    function myFunction(value){
+    return value 
+    }
+
+    let res =  arr.forEach(myFunction)
+    console.log(res)
 
