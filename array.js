@@ -1,43 +1,31 @@
 
-let number  = [1,2,1,3,5,4,6,7]
-let number2 = [10,20,40,0,100,120,4,20]
-console.log(number[0])
+//concat() method
 
-let city = ["harda", "timarni","sodalpur", "seoni"]
-console.log(city[1])
+//This method does not change the existing arrays, but instead returns a new array.
 
-let exs = number.toString()
-console.log(exs)
-console.log(typeof(exs))
-console.log(city)
-console.log(city.length)
-console.log(city.sort())
-console.log(number.sort())
-console.log(number2.sort())
+function concat(arr1,arr2){
+arr1 = ["harda","timarni","seoni","hoshangabad"];
+arr2 = ["sodalpur","betul"];
 
-function fruits(arr){
-    arr  = ['apple','mango','banana','chicku','strobarry','pinapple'] 
-    return arr
+console.log(arr1.concat(arr2,arr1))// new array
+console.log(arr1)
+console.log(arr2)
+
 }
-let fruitsArray = fruits();
-console.log(fruitsArray.sort())
+concat();
 
-for(let i = 0; i<city.length; i++){
-   console.log(i , city[i]) ;
+function nestedconcat(arr1,arr2){
+  arr1 = [[1]]  ,
+  arr2 = [2,[3]]
+  arr3 = [['sawan','malviya']]
+  let result  = arr1.concat(arr2)
+  console.log(result)
+  arr1[0].push(4)
+  console.log(result)
+  console.log(arr1.concat(arr3)) 
 }
-
-   let  arr = ['honda','hero','royal Enfild','ktm','tvs','r15','yamaha']
-    for(let i = 0; i<arr.length; i++){
-        console.log(arr[i])
-    }
-
-
+nestedconcat();
    
 
-    function myFunction(value){
-    return value 
-    }
 
-    let res =  arr.forEach(myFunction)
-    console.log(res)
 
