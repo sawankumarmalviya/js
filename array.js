@@ -264,4 +264,100 @@ let voter = person.filter((value) => {
 
  //Filtering elements containing a specific substring:
 
+  var strs = "sawan"
+  console.log(typeof +strs) //expected output number
+  console.log(typeof Number(strs))  //expected output number
+  console.log(typeof parseInt(strs))  //expected output number
+  console.log(typeof parseFloat(strs))  //expected output number
+  console.log(typeof strs + " ") //expected output string
+  console.log(typeof String(strs) ) //expected output string
+
+  //find prime number using filter method into givin array
+
+  let givArray = [2,3,52,4,8,7,5,3,6,9,11]
   
+  let pr = givArray.filter((item)=>{
+    for(let i =2; i<item; i++){
+      if(item% i===0){
+        return false;
+        break;
+      }
+    }
+    return item >1
+  })
+console.log(pr)
+
+
+/* finde methode of the array . return the first element in the provided array that satisfies 
+the provided testing function. if no value satisfy the testing function , undefine is return .*/
+
+const found =  givArray.find((element)=>{
+  if(element>10){
+    return element
+  }
+})
+console.log(found)
+
+/* findeINdex methode of the array . return the first element index in the provided array that satisfies 
+the provided testing function. if no value satisfy the testing function , -1 is return .*/
+
+const foundIndex =  givArray.findIndex((element)=>{
+  if(element>10){
+    return element
+  }
+})
+console.log(foundIndex)
+
+/* findeLast methode of the array . return the Last element in the provided array that satisfies 
+the provided testing function. if no value satisfy the testing function , undefine is return .*/
+
+const foundlast =  givArray.findLast((element)=>{
+  if(element>10){
+    return element
+  }
+})
+console.log(foundlast)
+
+/* findeLast methode of the array . return the last  element  index in the provided array that satisfies 
+the provided testing function. if no value satisfy the testing function , undefine is return .*/
+
+const foundlastIndex =  givArray.findLastIndex((element)=>{
+  if(element>10){
+    return element
+  }
+})
+console.log(foundlastIndex)
+
+/* The flat() method of Array instances creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.*/
+
+const fal = ["ram",["mohan","mishra",["was","go"]]]
+const falt = fal.flat(2);
+console.log(falt)
+console.log(fal)
+
+const flatArrat = [41,52,[20,30,[5,63,[52,[96]]]] ]
+const flatNewArray = flatArrat.flat(4)
+console.log(flatNewArray)
+console.log(flatArrat)
+
+
+//map mathod 
+const maparray = [1,2,3,4,5]
+const evenNumber = maparray.map((e)=>{
+  return e*2;
+})
+console.log(evenNumber)
+ const mapStr = ["apple","banana","graps"]
+const uppercase = mapStr.map((e)=>{
+  return e.toUpperCase() 
+})
+console.log(uppercase)
+
+
+const people = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 30 },
+  { name: "Charlie", age: 20 }
+];
+const namemap = people.map(e=> e.name)
+console.log(namemap)
