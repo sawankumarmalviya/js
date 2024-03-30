@@ -361,3 +361,21 @@ const people = [
 ];
 const namemap = people.map(e=> e.name)
 console.log(namemap)
+
+// map method behaind the seen how to work 
+var arraye = [1,2,3,4,5,6,7,8,9,10]
+
+function clbFunction(item){
+ return  item*2
+}
+var newArray = []
+for(let i=0; i<arraye.length;i++){
+  var x= clbFunction(arraye[i],i,arraye)
+  newArray.push(x)
+}
+console.log(newArray)
+
+
+function funOne(fun){
+
+}

@@ -373,3 +373,6 @@ function outsideFun(){
  return add()
 }
 console.log(outsideFun())
+
+
+

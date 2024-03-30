@@ -271,18 +271,18 @@ Basic Salary > 20000 : HRA = 30%, DA = 95%
 */
 
 let basic = 25000
-let hra ,da
-if (basic>=10000) {
-   da= basic*80/100
-   hra= basic*20/100 
-}else if(basic>=20000){
-    da= basic*90/100
-    hra= basic*25/100 
-}else  {
-    da= basic*95/100
-    hra= basic*30/100  
+let hra, da
+if (basic >= 10000) {
+    da = basic * 80 / 100
+    hra = basic * 20 / 100
+} else if (basic >= 20000) {
+    da = basic * 90 / 100
+    hra = basic * 25 / 100
+} else {
+    da = basic * 95 / 100
+    hra = basic * 30 / 100
 }
-let grosssalary= basic+hra+da
+let grosssalary = basic + hra + da
 console.log(grosssalary);
 
 /* Write a  program to input electricity unit charges and calculate total electricity bill  
@@ -297,14 +297,14 @@ An additional surcharge of 20% is added to the bill
 
 let unit = 251
 let res;
-if (unit<=50) {
-    res= unit*0.5
-}else if (unit<=150) {
-    res=unit*0.75
-}else if (unit<=250) {
-    res=unit*1.20 
-}else{
-    res= unit*1.50
+if (unit <= 50) {
+    res = unit * 0.5
+} else if (unit <= 150) {
+    res = unit * 0.75
+} else if (unit <= 250) {
+    res = unit * 1.20
+} else {
+    res = unit * 1.50
 }
 console.log(res)
 
@@ -313,46 +313,46 @@ console.log(res)
 // age below 60 pay a ticket price of 20, age over 60 play a ticket price of 15.
 
 let age = 40
-if (age<12) {
+if (age < 12) {
     console.log('price = 5')
-}else if (age<18) {
+} else if (age < 18) {
     console.log('price = 10')
-}else if(age<60){
+} else if (age < 60) {
     console.log('price = 20')
-}else{
+} else {
     console.log('price = 15')
 }
 
 // Write a program that calculates a discount based on the purchase amount.
 // Prices equal or over 100 discount have a discount of 20.
 // Prices equal or over 50 have a discount of 10. Otherwise discount is 0
- let price= 49;
- let discount;
- if (price>=100) {
-    discount = price*20/100
+let price = 49;
+let discount;
+if (price >= 100) {
+    discount = price * 20 / 100
     console.log(`${discount} over or equal 100RS`)
- }else if(price>=50){
-    discount = price*10/100
-    console.log(`${discount} over or equal 50RS`) 
- }else{
-    discount = price*0/100
-    console.log(`${discount} under  50RS`) 
- }
+} else if (price >= 50) {
+    discount = price * 10 / 100
+    console.log(`${discount} over or equal 50RS`)
+} else {
+    discount = price * 0 / 100
+    console.log(`${discount} under  50RS`)
+}
 
 //  Write a program that greets the user based on the time of day.
 //  Display good morning, good afternnon or good evening based on the time of day when you run the code.
 
-let currentTime= new Date();
-let hours= currentTime.getHours()
+let currentTime = new Date();
+let hours = currentTime.getHours()
 
-if (hours>=4 && hours<11.59) {
+if (hours >= 4 && hours < 11.59) {
     console.log('good morning')
-}else if(hours>=12 && hours<15.59){
+} else if (hours >= 12 && hours < 15.59) {
     console.log('good after noon ')
-}else if (hours>=16 && hours <19.59) {
+} else if (hours >= 16 && hours < 19.59) {
     console.log('good evening')
-}else{
-    console.log('good night')  
+} else {
+    console.log('good night')
 }
 
 // Write a program that calculates the Body Mass Index (BMI) and categorizes it.
@@ -360,37 +360,37 @@ if (hours>=4 && hours<11.59) {
 
 let weight = 40;
 let height = 1.75
-let BMI = weight/(height*height)
+let BMI = weight / (height * height)
 let categorizes;
-if (BMI<18.5) {
-    categorizes="under weight" 
-}else if (BMI<24.9) {
-    categorizes="Normal" 
-}else if(BMI<29.9){
-    categorizes="over weight "  
-}else{
-    categorizes="obese "   
+if (BMI < 18.5) {
+    categorizes = "under weight"
+} else if (BMI < 24.9) {
+    categorizes = "Normal"
+} else if (BMI < 29.9) {
+    categorizes = "over weight "
+} else {
+    categorizes = "obese "
 }
 console.log(`bmi = ${BMI} & categorizes = ${categorizes}`)
 
 
 // Assignment operators
 // -=
-let co1 =10
+let co1 = 10
 let co2 = 20
-co1-= co2
+co1 -= co2
 console.log(co1)
 
 // +=
-co1+=co2
+co1 += co2
 console.log(co1)
 
 // *=
-co1*=co2
+co1 *= co2
 console.log(co1)
 
 // /=
-co1/=co2
+co1 /= co2
 console.log(co1)
 
 co1++
@@ -399,7 +399,26 @@ console.log(co1)
 --co1
 console.log(co1)
 
-console.log(co2%co1)
-console.log(co2/co1)
-console.log(co1**2)
+console.log(co2 % co1)
+console.log(co2 / co1)
+console.log(co1 ** 2)
+
+
+let ages = 22;
+let citigen = true;
+let regestered = false;
+
+if (ages >= 18) {
+    if (citigen) {
+        if (regestered) {
+            console.log("you are  aligible for vote ")
+        } else {
+            console.log("you are not aligible for vote due to regestration")
+        }
+    } else {
+        console.log("you are not aligible for vote due to citigenship")
+    }
+} else {
+    console.log("you are not aligible for vote")
+}
 
